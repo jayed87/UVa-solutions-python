@@ -1,5 +1,6 @@
 while True:
   try:
+    
     line = input()
     inps = list(map(int, line.split()))
     n = inps[0]
