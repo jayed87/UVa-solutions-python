@@ -388,3 +388,17 @@
 #     return n**2
 
 # print(squaredNumber.__doc__)
+
+# problem 25
+
+# class Studen:
+#     name = "sumon" # class parameter
+#     def __init__(self,name = None):
+#         self.name = name #object parameter
+
+# obj = Studen("jayed")
+# print(obj.name)
+# print(Studen.name)
+# obj2 = Studen()
+# obj2.name = "akbar"
+# print("%s %s %s is my name"%(obj.name,obj2.name,Studen.name))
