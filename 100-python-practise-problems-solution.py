@@ -374,3 +374,17 @@
 #         print(squaredNumber(num))
 #     except EOFError:
 #         break
+
+# problem 24
+
+# print( abs.__doc__)
+# print(int.__doc__)
+# print(input.__doc__)
+
+# def squaredNumber(n):
+#     '''
+#         the function will return the squared value of the given value.
+#     '''
+#     return n**2
+
+# print(squaredNumber.__doc__)
