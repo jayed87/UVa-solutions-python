@@ -298,12 +298,22 @@
 # sorted_list.append(tuple(li.split(","))) 
 # print(sorted_list)
 
-from operator import itemgetter, attrgetter
-sorted_list = []
-while True:
-    strng = input()
-    if not strng:
-        break
-    sorted_list.append(tuple(strng.split(",")))
+# from operator import itemgetter, attrgetter
+# sorted_list = []
+# while True:
+#     strng = input()
+#     if not strng:
+#         break
+#     sorted_list.append(tuple(strng.split(",")))
 
-print (sorted(sorted_list, key=itemgetter(1)))
+# print (sorted(sorted_list, key=itemgetter(1)))
+
+# problem 20
+
+def putNumbers(n):
+    for i in range(0,n+1):
+        if i%7==0:
+            yield i
+
+for i in putNumbers(100):
+    print(i)
