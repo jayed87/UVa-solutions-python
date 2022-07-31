@@ -310,10 +310,39 @@
 
 # problem 20
 
-def putNumbers(n):
-    for i in range(0,n+1):
-        if i%7==0:
-            yield i
+# def putNumbers(n): # a function with yield in it called a generator
+#     for i in range(0,n+1):
+#         if i%7==0:
+#             yield i
 
-for i in putNumbers(100):
-    print(i)
+# for i in putNumbers(100):
+#     print(i)
+
+# problem 21
+
+import math
+
+pos=[0,0]
+while True:
+    s = input()
+    if not s:
+        break
+    li = s.split(" ")
+    direction = li[0]
+    movement = int(li[1])
+    # print(direction)
+    # print(movement)
+    if direction == "UP":
+        pos[1]+=movement
+    elif direction == "DOWN":
+        pos[1]-=movement
+    elif direction == "RIGHT":
+        pos[0]+=movement
+    elif direction == "LEFT":
+        pos[0]-=movement
+    else:
+        pass
+dist = int(round(math.sqrt(pos[1]**2+pos[0]**2)))
+print(dist)
+
+
