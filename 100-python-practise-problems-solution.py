@@ -320,29 +320,45 @@
 
 # problem 21
 
-import math
+# import math
 
-pos=[0,0]
+# pos=[0,0]
+# while True:
+#     s = input()
+#     if not s:
+#         break
+#     li = s.split(" ")
+#     direction = li[0]
+#     movement = int(li[1])
+#     # print(direction)
+#     # print(movement)
+#     if direction == "UP":
+#         pos[1]+=movement
+#     elif direction == "DOWN":
+#         pos[1]-=movement
+#     elif direction == "RIGHT":
+#         pos[0]+=movement
+#     elif direction == "LEFT":
+#         pos[0]-=movement
+#     else:
+#         pass
+# dist = int(round(math.sqrt(pos[1]**2+pos[0]**2)))
+# print(dist)
+
+# problem 22
+
 while True:
-    s = input()
-    if not s:
+    try:
+        line = [x for x in input().split(" ")]
+        words = {}
+        for word in line:
+            if word in words:
+                words[word]+=1
+            else:
+                words[word]= 1
+
+        for key in sorted(words.keys()):
+            print("%s:%d"%(key,words[key]))
+
+    except EOFError:
         break
-    li = s.split(" ")
-    direction = li[0]
-    movement = int(li[1])
-    # print(direction)
-    # print(movement)
-    if direction == "UP":
-        pos[1]+=movement
-    elif direction == "DOWN":
-        pos[1]-=movement
-    elif direction == "RIGHT":
-        pos[0]+=movement
-    elif direction == "LEFT":
-        pos[0]-=movement
-    else:
-        pass
-dist = int(round(math.sqrt(pos[1]**2+pos[0]**2)))
-print(dist)
-
-
