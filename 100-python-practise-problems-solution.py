@@ -362,3 +362,15 @@
 
 #     except EOFError:
 #         break
+
+# problem 23
+
+# def squaredNumber(n):
+#     return n**2
+
+# while True:
+#     try:
+#         num = int(input())
+#         print(squaredNumber(num))
+#     except EOFError:
+#         break
