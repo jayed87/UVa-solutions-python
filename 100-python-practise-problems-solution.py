@@ -347,18 +347,18 @@
 
 # problem 22
 
-while True:
-    try:
-        line = [x for x in input().split(" ")]
-        words = {}
-        for word in line:
-            if word in words:
-                words[word]+=1
-            else:
-                words[word]= 1
+# while True:
+#     try:
+#         line = [x for x in input().split(" ")]
+#         words = {}
+#         for word in line:
+#             if word in words:
+#                 words[word]+=1
+#             else:
+#                 words[word]= 1
 
-        for key in sorted(words.keys()):
-            print("%s:%d"%(key,words[key]))
+#         for key in sorted(words.keys()):
+#             print("%s:%d"%(key,words[key]))
 
-    except EOFError:
-        break
+#     except EOFError:
+#         break
