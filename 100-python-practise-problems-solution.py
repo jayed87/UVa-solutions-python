@@ -475,3 +475,98 @@
 # obj = American()
 # obj.printNationality()
 # American.printNationality()
+
+# problem 7.2
+
+# class American:
+#     # name1 = "jayed"
+#     pass
+# class NewYorker(American):
+#     # name2 = "akbar"
+#     pass
+
+# sub_class_obj = NewYorker()
+# super_class_obj = American()
+# print(sub_class_obj)
+# print(super_class_obj)
+
+# problem 7.2
+
+# class Circle:
+#     def __init__(self,radius):
+#         self.radius = radius
+
+#     def computeArea(self):
+#         area = 3.1416*self.radius**2
+#         print("the circle area is:  %.2f" %area)
+# area = Circle(3.4)
+# area.computeArea()
+
+# problem 7.2
+
+# class Shape:
+#     # length = 0
+#     def __init__(self):
+#         pass
+#     def area(self):
+#         return 0
+# class Square(Shape):
+#     def __init__(self, l):
+#         Shape.__init__(self)
+#         self.length = l
+#     def area(self):
+#         print(self.length**2)
+# # obj_shape = Shape()
+# # obj_shape.area()
+# obj_square = Square(4)
+# obj_square.area()
+
+# problem #runtimeError
+
+# raise RuntimeError('Something went wrong')
+
+# problem try/except
+
+# def er():
+#     return 5/0
+
+# try:
+#     er()
+# except ZeroDivisionError:
+#     print('Division by 0')
+# except Exception as err:
+#     print('Caught an exception')
+# finally:
+#     print('In finally clean up')
+
+
+# problem #custom exception
+
+# class MyError(Exception):
+#     """My own exception class
+
+#     Attributes:
+#         msg  -- explanation of the error
+#     """
+
+#     def __init__(self, msg):
+#         self.msg = msg
+
+# error = MyError("something wrong")
+# print(error)
+
+# problem 26
+
+# while True:
+#     try:
+#         s = [x for x in input().split("@")]
+#         print(s[0])
+#     except EOFError:
+#         break
+
+# import re
+# emailAddress = input()
+# part2 = "(\w+)@((\w+\.)+(com))"
+# part1 = "[\w.-]+@[\w.-]+" #for finding email addresses from the text
+# r2 = re.match(part2,emailAddress)
+# print(r2.group(1))
