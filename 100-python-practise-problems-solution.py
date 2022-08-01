@@ -402,3 +402,76 @@
 # obj2 = Studen()
 # obj2.name = "akbar"
 # print("%s %s %s is my name"%(obj.name,obj2.name,Studen.name))
+
+# problem 2.10
+
+# while True:
+#     try:
+#         s1 = input()
+#         s2 = input()
+#         if len(s1) > len(s2):
+#             print(s1)
+#         elif len(s1)<len(s2):
+#             print(s2)
+#         else:
+#             print(s1)
+#             print(s2)
+#     except EOFError:
+#         break
+
+# problem 2.10
+
+# dic = {}
+# for key in range(1, 4):
+#     dic[key] = key**2
+# print(dic)
+
+# problem 2.10
+
+# tu = (1,2,3,4,5,6,7,8,9,10)
+# for x in tu:
+#     print(x, end=" ")
+#     if x%5==0:
+#         print("\n")
+
+# problem 3.4
+
+# li = [1,2,3,4,5,6,7,8,9,10]
+
+# filtered_list = filter(lambda x: x%2==0, li)
+# print(list(filtered_list))
+
+# problem 3.4
+
+# li =[1,2,3,4,5,6,7,8,9,10]
+
+# mapped_list = map(lambda x: x**2, li)
+# print(list(mapped_list))
+
+# problem 3.5
+
+# li =[1,2,3,4,5,6,7,8,9,10]
+# filterd_mapped_list = filter(lambda x: x%2==0, map(lambda x: x**2, li))
+# print(list(filterd_mapped_list))
+
+# problem 3.5
+
+# # filtered_list = filter(lambda x: x%2==0,(x for x in range(1,21)))
+# filtered_list = filter(lambda x: x%2==0,range(1,21))
+# print(list(filtered_list))
+
+# problem 3.5
+
+# mapped_list = map(lambda x: x**2, range(1,21))
+# print(list(mapped_list))
+
+# problem 7.2
+
+# class American:
+#     @staticmethod 
+#     def printNationality():
+#         print("American")
+
+# obj = American()
+# obj.printNationality()
+# American.printNationality()
