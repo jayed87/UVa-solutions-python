@@ -570,3 +570,298 @@
 # part1 = "[\w.-]+@[\w.-]+" #for finding email addresses from the text
 # r2 = re.match(part2,emailAddress)
 # print(r2.group(1))
+
+# problem 27
+
+# class MyError(Exception):
+#     """My own exception class
+
+#     Attributes:
+#         msg  -- explanation of the error
+#     """
+
+#     def __init__(self, msg):
+#         self.msg = msg
+
+# error = MyError("something wrong")
+# print(error)
+
+# problem 28
+
+# import re
+# emailAddress = input()
+# pat2 = "(\w+)@(\w+)\.(com)"
+# pat1 = "(\w+)@((\w+\.)+(com))"
+# r2 = re.match(pat1,emailAddress)
+# print (r2.group(1))
+
+# problem 29
+
+# while True:
+#     try:
+#         ipt = [x for x in input().split(" ")]
+#         # print(ipt)
+#         arr = []
+#         for word in ipt:
+#             if word.isdigit():
+#                 arr.append(word)
+#         print(arr)
+#     except EOFError:
+#         break
+
+# ---- alternative with RE --
+
+# import re
+# sen = input()
+# print(re.findall("\d+", sen))
+
+# problem 30
+
+# unicodeString = u"hello world!"
+# print (unicodeString)
+
+#-*- coding: utf-8 -*-
+
+# problem 31
+
+# while True:
+#     try:
+#         num = int(input())
+#         sum = 0
+#         for i in range(1,num+1):
+#             sum +=float(float(i/(i+1)))
+#         print("%.2f"%sum)
+#     except EOFError:
+#         break
+
+# problem 32
+
+# def sum(n):
+#     if n <=0:
+#         return 0
+#     else:
+#         return sum(n-1)+100
+
+# x = sum(4)
+# print(x)
+
+# problem fibonacci series with recurssion
+
+# def fibonacchiSeries(n):
+#     if n==0:
+#         return 0
+#     elif n==1:
+#         return 1
+#     else:
+#         return fibonacchiSeries(n-1)+fibonacchiSeries(n-2)
+# results = fibonacchiSeries(7)
+# print(results)
+
+
+# problem fibonacci series with loop
+
+# f = 0
+# s = 1
+# sum = 0
+# for x in range(1, 8):
+#     print(f)
+#     sum = sum + f
+#     next = f + s
+#     f = s
+#     s = next
+
+
+# def fibonacchiSeries(n):
+#     if n==0:
+#         return 0
+#     elif n==1:
+#         return 1
+#     else:
+#         return fibonacchiSeries(n-1)+fibonacchiSeries(n-2)
+# results = [str(fibonacchiSeries(x)) for x in range(0, 7+1)] 
+# print(",".join(results))
+# print(results)
+
+# problem 33
+
+# def generator(n):
+#     i = 0
+#     while i<=n:
+#         if i%2==0:
+#             yield i
+#         i +=1
+# lst = []
+# for num in generator(10):
+#     lst.append(str(num))
+# lst.reverse()
+# print(",".join(lst))
+# print(lst)
+
+# def gen(n):
+#     i = 0
+#     while i<=n:
+#         if i%5==0 and i%7==0:
+#             yield i
+#         i+=1
+# values = []
+# for num in gen(50):
+#     values.append(str(num))
+# print(",".join(values))
+ 
+# problem 34 assertation expression
+
+# li = [2,4,6,8]
+# for i in li:
+#     assert i%2==0
+
+# problem 35 evaluate expression
+
+# ex = input()
+# print(eval(ex))
+
+# import random
+# print(random.random()*100-5)
+
+# import random
+
+# num = random.choice([x for x in range(0,11) if x%2==0])
+# print(num)
+
+# import random
+# num = random.choice([x for x in range(0,10) if x%5==0 and x%7==0])
+# print(num)
+
+# import random
+# print(random.sample([x for x in range(100,201) if x%2==0],5))
+# print(random.sample([x for x in range(1,1001) if x%5==0 and x%7==0],5))
+# print(random.randint(7,16))
+# print(random.randrange(7,16))
+
+
+# problem compress decompress
+# gzip and zlib both are used to compress and decompress a string but zlib is uses 6 bytes 
+# and faster where gzip uses 18 bytes and slower 
+# import zlib 
+# import gzip
+# s = b'hello world!hello world!hello world!hello world!'
+# t = zlib.compress(s)
+# print (t)
+# print (zlib.decompress(t))
+
+# problem run time
+
+# from timeit import Timer
+# t = Timer("for i in range(100):1+1")
+# print (t.timeit())
+# import timeit
+# sum = [x for x in range(0,1000)]
+# print(sum.timeit())
+
+# problem shuffle
+
+# from random import shuffle
+# li = [3,6,7,8]
+# shuffle(li)
+# print (li)
+
+# problem "generate sentences"
+
+# subjects=["I", "You"]
+# verbs=["Play", "Love"]
+# objects=["Hockey","Football"]
+# for i in range(len(subjects)):
+#     for j in range(len(verbs)):
+#         for k in range(len(objects)):
+#             sentence = "%s %s %s." % (subjects[i], verbs[j], objects[k])
+#             print (sentence)
+
+# li = [5,6,77,45,22,12,24]
+# newli = [x for x in li if x%2!=0]
+# mapli = map(lambda x: x%2!=0,li)
+# print(list(mapli))
+# numbers =[1, 2, 3, 4]
+# result = map(lambda x: x + x, numbers)
+# print(list(result))
+
+# problem enumerate 
+
+# li = [12,24,35,70,88,120,155]
+# newli = [value for (index, value) in enumerate(li) if index%2!=0] #removing even indexes
+# print(newli)
+
+# li = [12,24,35,70,88,120,155] #removing spacific indexes
+# li = [x for (i,x) in enumerate(li) if i not in (0,4,5)]
+# print (li)
+
+# problem nested array using list comprehension
+
+# arr = [[[0 for col in range(8)] for col in range(5)] for row in range(3)]
+# print(arr.type())
+
+# problem set intersection
+
+# set1 = set([1,3,6,78,35,55])
+# set2 = set([12,24,35,24,88,120,155])
+# set1 =set1 & set2
+# li=list(set1)
+# print (li)
+
+# li = [12,24,35,24,88,120,155,88,120,155]
+# print(set(li))
+
+# def removeDuplicate(li):
+#     newli=[]
+#     seen = set()
+#     for item in li:
+#         if item not in newli:
+#             seen.add( item )
+#             newli.append(item)
+
+#     return newli
+
+# li=[12,24,35,24,88,120,155,88,120,155]
+# print (removeDuplicate(li))
+
+# dic = {}
+# s=input()
+# for s in s:
+#     dic[s] = dic.get(s,0)+1
+# print ('\n'.join(['%s,%s' % (k, v) for k, v in dic.items()]))
+
+# dic = {}
+# s = input()
+# for l in s:
+#     if l in dic:
+#         dic[l] +=1
+#     else:
+#         dic[l]=1
+# # print('\n'.join(['%s,%s'%(k,v) for (k,v) in dic.items()]))
+# for k,v in dic.items():#printing techniques
+#     print('%s,%d'%(k,v))
+
+# problem reverse list value
+
+# s = input()
+# print(s[::-1])
+# s = 'H1e2l3l4o5w6o7r8l9d'
+# print(s[::2])
+
+# problem permutation
+
+# import itertools
+# print (list(itertools.permutations([1,2,3])))
+
+# problem head and legs count
+
+def solve(numheads,numlegs):
+    ns='No solutions!'
+    for i in range(numheads+1):
+        j=numheads-i
+        if 2*i+4*j==numlegs:
+            return i,j
+    return ns,ns
+
+numheads=35
+numlegs=94
+solutions=solve(numheads,numlegs)
+print (solutions)
